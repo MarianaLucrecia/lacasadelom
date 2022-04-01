@@ -1,10 +1,17 @@
-import Greeting from "react-greeting";
+import ItemCount from './ItemCount';
+import { Wrapper } from './styledComponents';
 
-const ItemListContainer = () => {
+const ItemListContainer = ({greeting}) => {
+
+    const onAdd = (qty) => {
+        alert("You have selected " + qty + " items.");
+    }
+
     return (
-        <div>
-            <h1>Bienvenidos a la casa del OM</h1>
-        </div>
+        <>
+            <Wrapper>{greeting}</Wrapper>
+            <ItemCount stock={5} initial={1} onAdd={onAdd} />
+        </>
     );
 }
 
