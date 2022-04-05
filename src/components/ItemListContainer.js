@@ -1,18 +1,30 @@
-import ItemCount from './ItemCount';
-import { Wrapper } from './styledComponents';
+//Componente que dibuja el cuerpo de la pagina
+import ItemList from "./ItemList";
+import { useEffect, useState } from "react";
+import { getProducts } from "../utils/products";
 
-const ItemListContainer = ({greeting}) => {
+//Componente que contiene a los artículos
+const ItemListContainer = () => {
+    const [datos, setProductos] = useState([]);
 
-    const onAdd = (qty) => {
-        alert("You have selected " + qty + " items.");
+    //Mostramos una alerta al agregar los items
+    const onAdd = (items) => {
+        alert(`${items} items added to cart`);
     }
+    
+    useEffect(() => {
+        //Obtenemos los productos con una promesa
+        async function fetchData() {
+            let data = await getProducts();
+            setProductos(data);
+            }
+        fetchData();
+        }, []);
 
-    return (
-        <>
-            <Wrapper>{greeting}</Wrapper>
-            <ItemCount stock={5} initial={1} onAdd={onAdd} />
-        </>
-    );
+        return (               
+            <ItemList items={datos} initial={1} onAdd={onAdd}/>           
+        );          
 }
 
+//Exportamos el componente
 export default ItemListContainer;

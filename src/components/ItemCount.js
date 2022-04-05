@@ -1,38 +1,42 @@
-import { Button } from '@material-ui/core';
-import { Add, Remove } from '@material-ui/icons';
-import { useEffect, useState } from 'react';
-import { ProductAmountContainer, ProductAmount } from './styledComponents';
+import { useEffect, useState } from "react";
+import { Button } from "react-bootstrap";
+import { Add, Remove } from '@material-ui/icons'
 
-const ItemCount = ({ stock = 0, initial = 1,  onAdd }) => {
-    const [count, setCount] = useState(0);
-
-    useEffect(() => {
-        setCount(initial);
-    },[]);
-
-    const increment = () => {
-        if (count < stock) {
-            setCount(count + 1);
+//Declaramos la clase y lo que se va a renderizar
+export default function ItemCount ({stock, initial, onAdd}) { 
+        //Declaramos el estado de la cantidad de items  
+        const [count, setCount] = useState(0);
+        
+        useEffect(() => {
+            setCount(initial);
+        }, [initial]);
+        //Funcion que se ejecuta cuando se hace click en el boton de restar
+        const remove = () => {
+            if(count > initial){
+                setCount(count - 1);
+            }
         }
-    }
-    
-    const decrement = () => {
-        if (count > initial) {
-            setCount(count - 1);
+        //Funcion que se ejecuta cuando se hace click en el boton de sumar
+        const add = () => {
+            if(count < stock){
+                setCount(count + 1);
+            }
         }
-    }
-    return (
-        <ProductAmountContainer>
-            <Button variant="text" onClick={increment}><Add /></Button>
-            <ProductAmount>{count}</ProductAmount>
-            <Button variant="text"  onClick={decrement}><Remove /></Button>
-            {
-                stock
-                ? <Button variant="contained" color="secundary" onClick={() => onAdd(count)}>Add to Cart</Button>
-                : <Button variant="contained" disabled>Add to Cart</Button>
-            }  
-        </ProductAmountContainer>
-    );
+        //Retornamos el componente
+        return (
+            <div className="d-grid gap-2">
+                <div className="mx-4 text-center">
+                <Button variant="outline-danger" size="sm" onClick={remove}><Remove /></Button>
+                    <span className="mx-5">{initial}</span>
+                <Button variant="outline-success" size="sm" onClick={add}><Add /></Button>
+                </div>                        
+                <div className="d-grid gap-2">
+                    {
+                        stock
+                        ?<Button variant="primary" size="small" onClick={() => onAdd(count)}>Add to Cart</Button>
+                        :<Button variant="danger" size="small" disabled>Out of Stock</Button>
+                    }                         
+                </div>
+            </div>
+        );    
 }
-
-export default ItemCount;

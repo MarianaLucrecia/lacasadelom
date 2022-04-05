@@ -1,15 +1,16 @@
-import React from 'react';
-import Carrito from './Carrito.jpg';
+//Componente que dibuja el icono del carrito, el cual se usara en el navbar
+import boostrap from "bootstrap/dist/css/bootstrap.css";
+import { Badge } from "@material-ui/core";
+import { ShoppingCartOutlined } from "@material-ui/icons";
 
-function CartWidget(props) {
-    return (
-        <div>
-            <img src={Carrito} />
-            <span>{props.CartWidgetContent}</span>
-            <span>{props.nombre}</span>
-
-        </div>
-    );
+//Declaramos la clase y lo que se va a renderizar
+const CartWidget = () => {  
+        return (
+            <Badge badgeContent={10} color="primary">
+                <ShoppingCartOutlined style={{color : "white"}}/>
+            </Badge>
+        );    
 }
 
-export default CartWidget
+//Exportamos el componente
+export default CartWidget;
