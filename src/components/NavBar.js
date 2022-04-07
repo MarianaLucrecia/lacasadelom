@@ -1,33 +1,28 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import CartWidget from './CartWidget';
+import { AppBar } from "@material-ui/core";
+import CartWidget from "./CartWidget";
+import { Wrapper, Logo, MenuItem, Left, Center, Right } from './styledComponents';
 
-const Navbar = () => {
-    return(
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <a class="navbar-brand" href="#">La Casa del OM</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Productos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Servicios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <CartWidget CartWidgetContent={10} />
-        </div>
-    </div>
-</nav>
+const NavBar = () => {
+    return (
+        <AppBar color="secondary" position="static">
+            <Wrapper>
+                <Left>
+                    <Logo>LA CASA DEL OM</Logo>
+                </Left>
+                <Center>
+                    <MenuItem>NOSOTROS</MenuItem>
+                    <MenuItem>PRODUCTOS</MenuItem>
+                    <MenuItem>SERVICIOS</MenuItem>                    
+                    <MenuItem>NOVEDADES</MenuItem>                    
+                </Center>
+                <Right>
+                    <MenuItem>REGISTER</MenuItem>
+                    <MenuItem>SIGN IN</MenuItem>
+                    <MenuItem><CartWidget /></MenuItem>
+                </Right>
+            </Wrapper>
+        </AppBar>
     );
 }
 
-export default Navbar;
+export default NavBar;

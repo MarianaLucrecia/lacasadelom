@@ -1,14 +1,14 @@
-import NavBar from '../components/NavBar';
-import ItemListContainer from '../components/ItemListContainer';
+   
+import ItemListContainer from "../components/ItemListContainer";
+import NavBar from "../components/NavBar";
 
-const  Home = () => {
-  return (
-      <>
-        <NavBar />
-        <ItemListContainer />
-      </>        
-  );
-        
+const Home = () => {
+    return (
+        <div>
+            <NavBar />
+            <ItemListContainer />
+        </div>
+    );
 }
 
 export default Home;

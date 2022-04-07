@@ -1,5 +1,5 @@
 //Componente que dibuja el icono del carrito, el cual se usara en el navbar
-import boostrap from "bootstrap/dist/css/bootstrap.css";
+//import boostrap from "bootstrap/dist/css/bootstrap.css";
 import { Badge } from "@material-ui/core";
 import { ShoppingCartOutlined } from "@material-ui/icons";
 
