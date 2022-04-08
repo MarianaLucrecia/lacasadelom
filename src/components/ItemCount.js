@@ -28,8 +28,8 @@ const ItemCount = ({ stock , initial ,  onAdd }) => {
             <Button variant="text" onClick={decrement}><Remove /></Button>
             {
                 stock
-                ? <Button variant="contained" color="primary" onClick={() => onAdd(count)}>Add to Cart</Button>
-                : <Button variant="contained" disabled>Agregar al Carrito</Button>
+                ? <Button variant="contained" color="primary" onClick={() => onAdd(count)}>Agregar</Button>
+                : <Button variant="contained" disabled>Agregar</Button>
             }
             
         </ProductAmountContainer>

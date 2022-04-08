@@ -17,11 +17,12 @@ const ItemListContainer = ({greeting}) => {
     const onAdd = (qty) => {
         alert("You have selected " + qty + " items.");
     }
+
     return (
         <>  
             <Wrapper>{greeting}</Wrapper>
-            {/* <ItemList items={datos} /> */}
-            <ItemCount stock={5} initial={1} onAdd={onAdd} /> 
+            <ItemList items={datos} />
+            <ItemCount stock={5} initial={1} onAdd={onAdd} />
         </>
     );
 }
