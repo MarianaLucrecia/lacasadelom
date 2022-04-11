@@ -1,4 +1,5 @@
 import { AppBar } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
 import { Wrapper, Logo, MenuItem, Left, Center, Right } from './styledComponents';
 
@@ -10,14 +11,13 @@ const NavBar = () => {
                     <Logo>LA CASA DEL OM</Logo>
                 </Left>
                 <Center>
-                    <MenuItem>NOSOTROS</MenuItem>
-                    <MenuItem>PRODUCTOS</MenuItem>
-                    <MenuItem>SERVICIOS</MenuItem>                    
-                    <MenuItem>NOVEDADES</MenuItem>                    
+                    <Link to='/categoryId/Productos' style={{textDecoration: "none", color: "white"}}><MenuItem>PRODUCTOS</MenuItem></Link>
+                    <Link to='/categoryId/Servicios' style={{textDecoration: "none", color: "white"}}><MenuItem>SERVICIOS</MenuItem></Link>
+                    <Link to='/categoryId/Novedades' style={{textDecoration: "none", color: "white"}}><MenuItem>NOVEDADES</MenuItem></Link>                   
                 </Center>
                 <Right>
                     <MenuItem>REGISTER</MenuItem>
-                    <MenuItem>SIGN IN</MenuItem>
+                    <MenuItem>LOGIN</MenuItem>
                     <MenuItem><CartWidget /></MenuItem>
                 </Right>
             </Wrapper>

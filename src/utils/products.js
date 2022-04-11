@@ -1,6 +1,6 @@
 export const products = [
     {id: 1,
-        category: "Oraculos",
+        categoryId: "Productos",
         name: "Oraculo de Esencias",
         brand: "Leerte",
         price: 122,
@@ -13,7 +13,7 @@ export const products = [
             ] 
     },
     {id: 2,
-        category: "Oraculos",
+        categoryId: "Productos",
         name: "Oraculo de las Diosas",
         brand: "Leerte",
         price: 24,
@@ -26,7 +26,7 @@ export const products = [
             ]  
     },
     {id: 3,
-        category: "Cartas",
+        categoryId: "Productos",
         name: "Cartas Tarot Marcelles",
         brand: "Leerte",
         price: 672,
@@ -39,7 +39,7 @@ export const products = [
             ] 
     },
     {id: 4,
-        category: "Oraculos",
+        categoryId: "Servicios",
         name: "Oraculo Lo Divino Femenino",
         brand: "Leerte",
         price: 2659,
@@ -52,7 +52,7 @@ export const products = [
             ]  
     },
     {id: 5,
-        category: "Auricos",
+        categoryId: "Servicios",
         name: "Aurico Arcángel Miguel",
         brand: "Limpiarte",
         price: 1919,
@@ -65,7 +65,7 @@ export const products = [
             ] 
     },
     {id: 6,
-        category: "Aurico",
+        categoryId: "Servicios",
         name: "Aurico Arcángel Jofiel",
         brand: "Limpiarte",
         price: 422,
@@ -78,7 +78,7 @@ export const products = [
             ]  
     },
     {id: 7,
-        category: "Auricos",
+        categoryId: "Servicios",
         name: "Aurico Arcangel Chamuel",
         brand: "Limpiarte",
         price: 165,
@@ -92,7 +92,7 @@ export const products = [
     },
 
     {id: 8,
-        category: "Aurico",
+        categoryId: "Servicios",
         name: "Aurico Arcangel Gabriel",
         brand: "Lucrecia",
         price: 157,
@@ -105,7 +105,7 @@ export const products = [
             ]
     },
     {id: 9,
-        category: "Velas",
+        categoryId: "Servicios",
         name: "Velon Ritual San Expedito",
         brand: "Iluminarte",
         price: 350,
@@ -118,7 +118,7 @@ export const products = [
             ]  
     },
     {id: 10,
-        category: "Velas",
+        categoryId: "Servicios",
         name: "Velon ritual San Jorge",
         brand: "Iluminarte",
         price: 477,
@@ -131,7 +131,7 @@ export const products = [
             ]  
     },    
     {id: 11,
-        category: "Velas",
+        categoryId: "Servicios",
         name: "Velas 7 Arcangeles",
         brand: "Lucrecia",
         price: 35,
@@ -144,7 +144,7 @@ export const products = [
             ]  
     },    
     {id: 12,
-        category: "Velas",
+        categoryId: "Servicios",
         name: "Vela De Intencion Proposito Proteccion Pureza Amor Esencias",
         brand: "Lucrecia",
         price: 35,
@@ -157,7 +157,7 @@ export const products = [
             ]  
     },    
     {id: 13,
-        category: "Limpieza",
+        categoryId: "Productos",
         name: "HIERBAS DE SAHUMADO Amor y prosperidad",
         brand: "Limpiarte",
         price: 905,
@@ -170,7 +170,7 @@ export const products = [
             ]  
     },
     {id: 14,
-        category: "Limpieza",
+        categoryId: "Productos",
         name: "Bomba de Carbón Aromática",
         brand: "Limpiarte",
         price: 915,
@@ -183,7 +183,7 @@ export const products = [
             ] 
     },
     {id: 15,
-        category: "Limpieza",
+        categoryId: "Productos",
         name: "Set de Limpieza Energetica",
         brand: "Limpiarte",
         price: 3199,
@@ -196,7 +196,7 @@ export const products = [
             ]
     },
     {id: 16,
-        category: "Limpieza",
+        categoryId: "Productos",
         name: "Carbones",
         brand: "Limpiarte",
         price: 170,
