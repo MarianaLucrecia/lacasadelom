@@ -5,20 +5,20 @@ import { Wrapper, Logo, MenuItem, Left, Center, Right } from './styledComponents
 
 const NavBar = () => {
     return (
-        <AppBar color="secondary" position="static">
+        <AppBar position="relative" color= "violeta">
             <Wrapper>
                 <Left>
-                    <Logo>LA CASA DEL OM</Logo>
+                    <Link to='/' style={{textDecoration: "none", color: "wblack"}}><Logo>La Casa del Om</Logo></Link>
                 </Left>
                 <Center>
-                    <Link to='/categoryId/Productos' style={{textDecoration: "none", color: "white"}}><MenuItem>PRODUCTOS</MenuItem></Link>
-                    <Link to='/categoryId/Servicios' style={{textDecoration: "none", color: "white"}}><MenuItem>SERVICIOS</MenuItem></Link>
-                    <Link to='/categoryId/Novedades' style={{textDecoration: "none", color: "white"}}><MenuItem>NOVEDADES</MenuItem></Link>                   
+                    <Link to='/category/Productos' style={{textDecoration: "none", color: "wblack"}}><MenuItem>Productos</MenuItem></Link>
+                    <Link to='/category/Servicios' style={{textDecoration: "none", color: "wblack"}}><MenuItem>Servicios</MenuItem></Link>
+                    <Link to='/category/Novedades' style={{textDecoration: "none", color: "wblack"}}><MenuItem>Novedades</MenuItem></Link>                    
                 </Center>
                 <Right>
-                    <MenuItem>REGISTER</MenuItem>
-                    <MenuItem>LOGIN</MenuItem>
-                    <MenuItem><CartWidget /></MenuItem>
+                    <MenuItem>Register</MenuItem>
+                    <MenuItem>LogIn</MenuItem>
+                    <MenuItem><Link to='/cart' style={{textDecoration: "none", color: "wblack"}}><CartWidget /></Link></MenuItem>
                 </Right>
             </Wrapper>
         </AppBar>

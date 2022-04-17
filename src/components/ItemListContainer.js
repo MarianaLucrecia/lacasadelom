@@ -1,4 +1,3 @@
-import ItemCount from './ItemCount';
 import ItemList from './ItemList';
 import customFetch from "../utils/customFetch";
 import { useEffect, useState } from 'react';
@@ -9,9 +8,9 @@ import { products } from '../utils/products';
 const ItemListContainer = () => {
     const [datos, setDatos] = useState([]);
     const { idCategory } = useParams();
-    console.log(idCategory);
-       //componentDidUpdate
-       useEffect(() => {
+
+    //componentDidUpdate
+    useEffect(() => {
         if (idCategory === undefined) {
             customFetch(2000, products)
             .then(result => setDatos(result))
@@ -22,14 +21,16 @@ const ItemListContainer = () => {
         }
     }, [idCategory]);
 
-    const onAdd = (qty) => {
-        alert("You have selected " + qty + " items.");
-    }
+    //componentWillUnmount
+    useEffect(() => {
+        return (() => {
+            setDatos([]);
+        })
+    }, []);
 
     return (
         <>  
             <ItemList items={datos} />
-            <ItemCount stock={5} initial={1} onAdd={onAdd} />
         </>
     );
 }
