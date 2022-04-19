@@ -2,8 +2,7 @@ import ItemList from './ItemList';
 import customFetch from "../utils/customFetch";
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import { products } from '../utils/products';
-//const { products } = require('../utils/products');
+const { products } = require('../utils/products');
 
 const ItemListContainer = () => {
     const [datos, setDatos] = useState([]);
@@ -11,14 +10,12 @@ const ItemListContainer = () => {
 
     //componentDidUpdate
     useEffect(() => {
-        if (idCategory === undefined) {
-            customFetch(2000, products)
+        customFetch(500, products.filter(item => {
+            if (idCategory === undefined) return item;
+            return item.categoryId === parseInt(idCategory)
+        }))
             .then(result => setDatos(result))
             .catch(err => console.log(err))
-        } else { customFetch(2000, products.filter(item => item.categoryId === idCategory))
-            .then(result => setDatos(result))
-            .catch(err => console.log(err))
-        }
     }, [idCategory]);
 
     //componentWillUnmount
@@ -29,9 +26,7 @@ const ItemListContainer = () => {
     }, []);
 
     return (
-        <>  
             <ItemList items={datos} />
-        </>
     );
 }
 
