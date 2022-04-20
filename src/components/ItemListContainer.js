@@ -12,11 +12,11 @@ const ItemListContainer = () => {
     useEffect(() => {
         customFetch(500, products.filter(item => {
             if (idCategory === undefined) return item;
-            return item.categoryId === parseInt(idCategory)
+            return item.categoryId === (idCategory)
         }))
             .then(result => setDatos(result))
             .catch(err => console.log(err))
-    }, [idCategory]);
+    }, [ idCategory ]);
 
     //componentWillUnmount
     useEffect(() => {

@@ -15,7 +15,7 @@ const Item = ({ id, name, stock, price, image }) => {
                     <DescriptionOutlined />{stock} unid.
                 </Icon>
                 <Icon style={{cursor: "pointer"}}>
-                    <Link to={`/item/${id}`}><InfoOutlined />Details</Link>
+                    <Link to={`/item/${id}`}><InfoOutlined />Detalle</Link>
                 </Icon>
             </Info>
         </ProductContainer>

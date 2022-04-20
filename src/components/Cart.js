@@ -74,13 +74,13 @@ const Cart = () => {
 
     return (
         <WrapperCart>
-            <TitleCart>YOUR CART</TitleCart>
+            <TitleCart>TU CARRITO</TitleCart>
             <Top>
-                <Link to='/'><TopButton>CONTINUE SHOPPING</TopButton></Link>
+                <Link to='/'><TopButton>SEGUI COMPRANDO</TopButton></Link>
                 {
                     (test.cartList.length > 0)
-                    ? <TopButton type="filled" onClick={test.removeList}>DELETE ALL PRODUCTS</TopButton>
-                    : <TopText>Your cart is empty</TopText>
+                    ? <TopButton type="filled" onClick={test.removeList}>BORRAR PRODUCTOS</TopButton>
+                    : <TopText>CARRITO VACIO</TopText>
                 }
             </Top>
             <ContentCart>
@@ -96,7 +96,7 @@ const Cart = () => {
                                 <span>
                                     <b>Product:</b> {item.nameItem}
                                 </span>
-                                <TopButton type="filled" onClick={() => test.deleteItem(item.idItem)}>DELETE</TopButton>
+                                <TopButton type="filled" onClick={() => test.deleteItem(item.idItem)}>BORRAR</TopButton>
                                 </Details>
                             </ProductDetail>
                             <PriceDetail>
@@ -114,24 +114,24 @@ const Cart = () => {
                 {
                     test.cartList.length > 0 &&
                         <Summary>
-                            <SummaryTitle>ORDER SUMMARY</SummaryTitle>
+                            <SummaryTitle>RESUMEN DE COMPRA</SummaryTitle>
                             <SummaryItem>
                                 <SummaryItemText>Subtotal</SummaryItemText>
                                 <SummaryItemPrice><FormatNumber number={test.calcSubTotal()} /></SummaryItemPrice>
                             </SummaryItem>
                             <SummaryItem>
-                                <SummaryItemText>Taxes</SummaryItemText>
+                                <SummaryItemText>Impuesto</SummaryItemText>
                                 <SummaryItemPrice><FormatNumber number={test.calcTaxes()} /></SummaryItemPrice>
                             </SummaryItem>
                             <SummaryItem>
-                                <SummaryItemText>Taxes Discount</SummaryItemText>
+                                <SummaryItemText>Descuento Impuesto</SummaryItemText>
                                 <SummaryItemPrice><FormatNumber number={-test.calcTaxes()} /></SummaryItemPrice>
                             </SummaryItem>
                             <SummaryItem type="total">
-                                <SummaryItemText>Total</SummaryItemText>
+                                <SummaryItemText>TOTAL</SummaryItemText>
                                 <SummaryItemPrice><FormatNumber number={test.calcTotal()} /></SummaryItemPrice>
                             </SummaryItem>
-                            <Button>CHECKOUT NOW</Button>
+                            <Button>FINALIZAR LA COMPRA</Button>
                         </Summary>
                 }
             </Bottom>

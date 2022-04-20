@@ -151,7 +151,7 @@ export const products = [
         sales: 5,
         iva: 1.22,
         image: [
-            "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRvkfIeZTx06kEEkcWaISxfPUdiWtU_NcETZYGhJoVZ9RulKm510S_q7EKPa1h8Fc8MbEy-jO5t8g&usqp=CAc"
+            "https://semillafluorescente.com/wp-content/uploads/2020/11/Kit-noche-de-luz-y-magia-1.4.jpg"
             ]  
     },    
     {id: 12,

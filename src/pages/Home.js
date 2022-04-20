@@ -10,7 +10,7 @@ const Home = () => {
             <NavBar />
             <Routes>
                 <Route path='/' element={<ItemListContainer />} />
-                <Route path='/category/:idCategory' element={<ItemListContainer />} />
+                <Route path='/category/:IdCategory' element={<ItemListContainer />} />
                 <Route path='/item/:idItem' element={<ItemDetailContainer />} />
                 <Route path='/cart' element={<Cart />} />
             </Routes>

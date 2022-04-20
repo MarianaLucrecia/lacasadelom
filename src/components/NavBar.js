@@ -5,10 +5,10 @@ import { Wrapper, Logo, MenuItem, Left, Center, Right } from './styledComponents
 
 const NavBar = () => {
     return (
-        <AppBar position="relative" color= "violeta">
+        <AppBar position="relative" color= "secondary">
             <Wrapper>
                 <Left>
-                    <Link to='/' style={{textDecoration: "none", color: "wblack"}}><Logo>La Casa del Om</Logo></Link>
+                    <Link to='/' style={{textDecoration: "none", color: "wblack"}}><Logo>La Casa del OM</Logo></Link>
                 </Left>
                 <Center>
                     <Link to='/category/Productos' style={{textDecoration: "none", color: "wblack"}}><MenuItem>Productos</MenuItem></Link>
