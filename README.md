@@ -1,3 +1,2 @@
-EComerce LaCasadelOM
-Terapias Holisticas
-Desafio 8 entregado
+# lacasadelom
+EComerce de Productos y Servicios Holísticos
