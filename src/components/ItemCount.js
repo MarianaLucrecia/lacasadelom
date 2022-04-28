@@ -24,7 +24,7 @@ const ItemCount = ({ stock = 0, initial = 1,  onAdd }) => {
             <Button variant="text" onClick={decrement}><Remove /></Button>
             {
                 stock && count
-                ? <Button variant="contained" color="primary" onClick={() => onAdd(count)}>Add to Cart</Button>
+                ? <Button variant="contained" color="primary" onClick={() => onAdd(count)}>Agregar al Carrito</Button>
                 : <Button variant="contained" disabled>Agregar al Carrito</Button>
             }
             

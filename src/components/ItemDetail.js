@@ -29,7 +29,7 @@ const ItemDetail = ({ item }) => {
                         <Title>{item.name}</Title>
                         <Desc>{item.description}</Desc>
                         <Price>$ {item.cost}</Price>
-                        <Desc>{item.stock}unidades en stock</Desc>
+                        <Desc>{item.stock}Un en stock</Desc>
                     </InfoContainer>
                     {
                         itemCount === 0
