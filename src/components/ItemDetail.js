@@ -23,7 +23,7 @@ const ItemDetail = ({ item }) => {
             <DetailContainer>
                 <WrapperDetail>
                     <ImgContainer>
-                        <ImageDetail src={item.image[0]} />
+                        <ImageDetail src={item.image} />
                     </ImgContainer>
                     <InfoContainer>
                         <Title>{item.name}</Title>
